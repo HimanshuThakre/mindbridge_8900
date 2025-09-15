@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Assistant Portal - MindBridge</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <meta name="description" content="Experience MindBridge's culturally-sensitive AI assistant. Get personalized mental health support in your language, understanding Indian student challenges." />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fmindbridge7782back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.8"></script>
+</head>
+<body class="bg-background font-source-sans">
+    <!-- Crisis Support Banner -->
+    <div id="crisis-banner" class="bg-error text-white py-2 px-4 text-center text-sm font-medium">
+        <span class="mr-2">🚨 In Crisis?</span>
+        <a href="crisis_support_center.html" class="underline hover:no-underline font-semibold">Get Immediate Help</a>
+        <span class="ml-4 text-xs">24/7 Support Available</span>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="bg-white shadow-soft sticky top-0 z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <svg class="h-8 w-8 text-primary" viewBox="0 0 32 32" fill="currentColor">
+                            <path d="M16 2C8.268 2 2 8.268 2 16s6.268 14 14 14 14-6.268 14-14S23.732 2 16 2zm0 4c5.514 0 10 4.486 10 10s-4.486 10-10 10S6 21.514 6 16 10.486 6 16 6z"/>
+                            <path d="M12 12h8v2h-8zm0 4h8v2h-8zm0 4h6v2h-6z"/>
+                            <circle cx="16" cy="16" r="3" fill="currentColor" opacity="0.3"/>
+                        </svg>
+                    </div>
+                    <div class="ml-3">
+                        <h1 class="text-xl font-inter font-bold text-primary">MindBridge</h1>
+                        <p class="text-xs text-text-secondary">मानसिक स्वास्थ्य सेतु</p>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="homepage.html" class="text-text-secondary hover:text-primary px-3 py-2 rounded-md text-sm transition-gentle">Home</a>
+                        <a href="ai_assistant_portal.html" class="text-primary font-semibold px-3 py-2 rounded-md text-sm">AI Assistant</a>
+                        <a href="resource_library.html" class="text-text-secondary hover:text-primary px-3 py-2 rounded-md text-sm transition-gentle">Resources</a>
+                        <a href="professional_network.html" class="text-text-secondary hover:text-primary px-3 py-2 rounded-md text-sm transition-gentle">Counselors</a>
+                        <a href="student_dashboard.html" class="btn-primary text-sm py-2">Student Portal</a>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-text-secondary hover:text-primary p-2">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation Menu -->
+            <div id="mobile-menu" class="md:hidden hidden">
+                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-surface rounded-lg mt-2">
+                    <a href="homepage.html" class="text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base">Home</a>
+                    <a href="ai_assistant_portal.html" class="text-primary font-semibold block px-3 py-2 rounded-md text-base">AI Assistant</a>
+                    <a href="resource_library.html" class="text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base">Resources</a>
+                    <a href="professional_network.html" class="text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base">Counselors</a>
+                    <a href="student_dashboard.html" class="btn-primary block text-center mt-2">Student Portal</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-secondary-50 to-accent-50 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8">
+                <h1 class="text-4xl lg:text-5xl font-inter font-bold text-primary mb-4">
+                    Meet Your AI Mental Health Companion
+                </h1>
+                <p class="text-lg lg:text-xl text-primary-700 mb-2 font-crimson">
+                    आपका व्यक्तिगत मानसिक स्वास्थ्य सहायक
+                </p>
+                <p class="text-lg text-text-secondary max-w-3xl mx-auto">
+                    Experience culturally-sensitive AI support that understands Indian student life, family dynamics, and academic pressures. Available 24/7 in multiple languages.
+                </p>
+            </div>
+
+            <!-- Language & Privacy Controls -->
+            <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6 mb-8">
+                <div class="flex items-center space-x-2">
+                    <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M7 2a1 1 0 011 1v1h3a1 1 0 110 2H9.578a18.87 18.87 0 01-1.724 4.78c.29.354.596.696.914 1.026a1 1 0 11-1.44 1.389c-.188-.196-.373-.396-.554-.6a19.098 19.098 0 01-3.107 3.567 1 1 0 01-1.334-1.49 17.087 17.087 0 003.13-3.733 18.992 18.992 0 01-1.487-2.494 1 1 0 111.79-.89c.234.47.489.928.764 1.372.417-.934.752-1.913.997-2.927H3a1 1 0 110-2h3V3a1 1 0 011-1zm6 6a1 1 0 01.894.553l2.991 5.982a.869.869 0 01.02.037l.99 1.98a1 1 0 11-1.79.895L15.383 16h-4.764l-.724 1.447a1 1 0 11-1.788-.894l.99-1.98.019-.038 2.99-5.982A1 1 0 0113 8zm-1.382 6h2.764L13 11.236 11.618 14z" clip-rule="evenodd"/>
+                    </svg>
+                    <select id="language-selector" class="bg-white border border-border rounded-lg px-3 py-2 text-sm focus:border-accent focus:ring-2 focus:ring-accent-100">
+                        <option value="en">English</option>
+                        <option value="hi">हिंदी (Hindi)</option>
+                        <option value="ta">தமிழ் (Tamil)</option>
+                        <option value="te">తెలుగు (Telugu)</option>
+                        <option value="bn">বাংলা (Bengali)</option>
+                    </select>
+                </div>
+                <div class="flex items-center space-x-2 text-sm text-text-secondary">
+                    <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/>
+                    </svg>
+                    <span>100% Anonymous & Encrypted</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Chat Interface -->
+    <section class="py-8 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Chat Interface -->
+                <div class="lg:col-span-2">
+                    <div class="bg-surface rounded-2xl shadow-medium overflow-hidden">
+                        <!-- Chat Header -->
+                        <div class="bg-white border-b border-border px-6 py-4">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-10 h-10 bg-secondary rounded-full flex items-center justify-center">
+                                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-inter font-semibold text-primary">MindBridge AI</h3>
+                                        <div class="flex items-center space-x-2">
+                                            <div class="w-2 h-2 bg-accent rounded-full"></div>
+                                            <span class="text-xs text-accent font-medium">Online</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <button class="p-2 text-text-secondary hover:text-primary transition-gentle" title="Voice Input">
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M7 4a3 3 0 016 0v4a3 3 0 11-6 0V4zm4 10.93A7.001 7.001 0 0017 8a1 1 0 10-2 0A5 5 0 015 8a1 1 0 00-2 0 7.001 7.001 0 006 6.93V17H6a1 1 0 100 2h8a1 1 0 100-2h-3v-2.07z" clip-rule="evenodd"/>
+                                        </svg>
+                                    </button>
+                                    <button class="p-2 text-text-secondary hover:text-primary transition-gentle" title="Settings">
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Chat Messages -->
+                        <div id="chat-messages" class="h-96 overflow-y-auto p-6 space-y-4">
+                            <!-- Welcome Message -->
+                            <div class="flex items-start space-x-3">
+                                <div class="w-8 h-8 bg-secondary rounded-full flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                    </svg>
+                                </div>
+                                <div class="bg-secondary-50 rounded-lg p-4 max-w-md">
+                                    <p class="text-secondary-800 text-sm">
+                                        Namaste! I'm your MindBridge AI companion. I understand the unique challenges Indian students face - from exam pressure to family expectations. How are you feeling today?
+                                    </p>
+                                    <div class="text-xs text-secondary-600 mt-2">Just now</div>
+                                </div>
+                            </div>
+
+                            <!-- Sample Conversation -->
+                            <div class="flex items-start space-x-3 justify-end">
+                                <div class="bg-surface rounded-lg p-4 max-w-md">
+                                    <p class="text-text-primary text-sm">
+                                        I'm really stressed about my upcoming JEE Advanced exam. My parents have such high expectations and I'm afraid I'll disappoint them.
+                                    </p>
+                                    <div class="text-xs text-text-secondary mt-2">2 minutes ago</div>
+                                </div>
+                                <div class="w-8 h-8 bg-accent rounded-full flex items-center justify-center flex-shrink-0">
+                                    <span class="text-white text-sm font-semibold">You</span>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-3">
+                                <div class="w-8 h-8 bg-secondary rounded-full flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                    </svg>
+                                </div>
+                                <div class="bg-secondary-50 rounded-lg p-4 max-w-md">
+                                    <p class="text-secondary-800 text-sm">
+                                        I completely understand that pressure. JEE Advanced is challenging, and family expectations can feel overwhelming. Remember, your worth isn't defined by exam results. Let's work on some coping strategies. Have you been able to maintain a study-life balance?
+                                    </p>
+                                    <div class="flex items-center space-x-2 mt-3">
+                                        <button class="bg-accent-100 text-accent-700 px-3 py-1 rounded-full text-xs hover:bg-accent-200 transition-gentle">
+                                            Stress Management Tips
+                                        </button>
+                                        <button class="bg-accent-100 text-accent-700 px-3 py-1 rounded-full text-xs hover:bg-accent-200 transition-gentle">
+                                            Talk to Counselor
+                                        </button>
+                                    </div>
+                                    <div class="text-xs text-secondary-600 mt-2">1 minute ago</div>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-3 justify-end">
+                                <div class="bg-surface rounded-lg p-4 max-w-md">
+                                    <p class="text-text-primary text-sm">
+                                        Not really. I study 12-14 hours a day and barely sleep. My friends think I'm avoiding them.
+                                    </p>
+                                    <div class="text-xs text-text-secondary mt-2">30 seconds ago</div>
+                                </div>
+                                <div class="w-8 h-8 bg-accent rounded-full flex items-center justify-center flex-shrink-0">
+                                    <span class="text-white text-sm font-semibold">You</span>
+                                </div>
+                            </div>
+
+                            <!-- Typing Indicator -->
+                            <div id="typing-indicator" class="flex items-start space-x-3">
+                                <div class="w-8 h-8 bg-secondary rounded-full flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                    </svg>
+                                </div>
+                                <div class="bg-secondary-50 rounded-lg p-4">
+                                    <div class="flex space-x-1">
+                                        <div class="w-2 h-2 bg-secondary-400 rounded-full animate-bounce"></div>
+                                        <div class="w-2 h-2 bg-secondary-400 rounded-full animate-bounce" style="animation-delay: 0.1s"></div>
+                                        <div class="w-2 h-2 bg-secondary-400 rounded-full animate-bounce" style="animation-delay: 0.2s"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Chat Input -->
+                        <div class="border-t border-border p-4">
+                            <div class="flex items-center space-x-3">
+                                <button class="p-2 text-text-secondary hover:text-primary transition-gentle" title="Attach File">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M8 4a3 3 0 00-3 3v4a5 5 0 0010 0V7a1 1 0 112 0v4a7 7 0 11-14 0V7a5 5 0 0110 0v4a3 3 0 11-6 0V7a1 1 0 012 0v4a1 1 0 102 0V7a3 3 0 00-3-3z" clip-rule="evenodd"/>
+                                    </svg>
+                                </button>
+                                <input type="text" id="chat-input" placeholder="Type your message... (Press Enter to send)" class="flex-1 input-field py-3 text-sm" />
+                                <button id="send-button" class="btn-secondary py-3 px-4 text-sm">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="flex items-center justify-between mt-2 text-xs text-text-secondary">
+                                <span>Your conversations are completely anonymous and encrypted</span>
+                                <div class="flex items-center space-x-2">
+                                    <span>Powered by</span>
+                                    <span class="font-semibold text-secondary">MindBridge AI</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI Features Sidebar -->
+                <div class="space-y-6">
+                    <!-- Mood Analysis -->
+                    <div class="card">
+                        <div class="flex items-center space-x-3 mb-4">
+                            <div class="w-8 h-8 bg-accent-100 rounded-lg flex items-center justify-center">
+                                <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 100-2 1 1 0 000 2zm7-1a1 1 0 11-2 0 1 1 0 012 0zm-.464 5.535a1 1 0 10-1.415-1.414 3 3 0 01-4.242 0 1 1 0 00-1.415 1.414 5 5 0 007.072 0z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <h3 class="font-inter font-semibold text-primary">Current Mood Analysis</h3>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm text-text-secondary">Stress Level</span>
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-16 h-2 bg-warning/20 rounded-full">
+                                        <div class="w-12 h-2 bg-warning rounded-full"></div>
+                                    </div>
+                                    <span class="text-sm font-medium text-warning">High</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm text-text-secondary">Anxiety</span>
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-16 h-2 bg-error/20 rounded-full">
+                                        <div class="w-10 h-2 bg-error rounded-full"></div>
+                                    </div>
+                                    <span class="text-sm font-medium text-error">Moderate</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm text-text-secondary">Confidence</span>
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-16 h-2 bg-accent/20 rounded-full">
+                                        <div class="w-6 h-2 bg-accent rounded-full"></div>
+                                    </div>
+                                    <span class="text-sm font-medium text-accent">Low</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-4 p-3 bg-accent-50 rounded-lg">
+                            <p class="text-xs text-accent-800">
+                                Based on your conversation, I recommend some breathing exercises and connecting with a counselor.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Quick Actions -->
+                    <div class="card">
+                        <h3 class="font-inter font-semibold text-primary mb-4">Quick Actions</h3>
+                        <div class="space-y-3">
+                            <button class="w-full text-left p-3 bg-accent-50 hover:bg-accent-100 rounded-lg transition-gentle">
+                                <div class="flex items-center space-x-3">
+                                    <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                    </svg>
+                                    <div>
+                                        <div class="font-medium text-accent-800">Breathing Exercise</div>
+                                        <div class="text-xs text-accent-600">5-minute guided session</div>
+                                    </div>
+                                </div>
+                            </button>
+                            <button class="w-full text-left p-3 bg-secondary-50 hover:bg-secondary-100 rounded-lg transition-gentle">
+                                <div class="flex items-center space-x-3">
+                                    <svg class="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M8 9a3 3 0 100-6 3 3 0 000 6zM8 11a6 6 0 016 6H2a6 6 0 016-6zM16 7a1 1 0 10-2 0v1h-1a1 1 0 100 2h1v1a1 1 0 102 0v-1h1a1 1 0 100-2h-1V7z"/>
+                                    </svg>
+                                    <div>
+                                        <div class="font-medium text-secondary-800">Talk to Counselor</div>
+                                        <div class="text-xs text-secondary-600">Connect with professional</div>
+                                    </div>
+                                </div>
+                            </button>
+                            <a href="resource_library.html" class="w-full text-left p-3 bg-primary-50 hover:bg-primary-100 rounded-lg transition-gentle block">
+                                <div class="flex items-center space-x-3">
+                                    <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z"/>
+                                    </svg>
+                                    <div>
+                                        <div class="font-medium text-primary-800">Study Resources</div>
+                                        <div class="text-xs text-primary-600">Exam stress management</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Cultural Context -->
+                    <div class="card">
+                        <h3 class="font-inter font-semibold text-primary mb-4">Cultural Awareness</h3>
+                        <div class="space-y-3">
+                            <div class="flex items-center space-x-3 p-3 bg-surface rounded-lg">
+                                <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
+                                </svg>
+                                <div>
+                                    <div class="font-medium text-text-primary text-sm">Exam Season Detected</div>
+                                    <div class="text-xs text-text-secondary">JEE Advanced approaching</div>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-3 p-3 bg-surface rounded-lg">
+                                <svg class="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clip-rule="evenodd"/>
+                                </svg>
+                                <div>
+                                    <div class="font-medium text-text-primary text-sm">Family Dynamics</div>
+                                    <div class="text-xs text-text-secondary">High expectations context</div>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-3 p-3 bg-surface rounded-lg">
+                                <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z" clip-rule="evenodd"/>
+                                </svg>
+                                <div>
+                                    <div class="font-medium text-text-primary text-sm">Stress Patterns</div>
+                                    <div class="text-xs text-text-secondary">Academic pressure identified</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Capabilities Showcase -->
+    <section class="py-16 bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-inter font-bold text-primary mb-4">Why MindBridge AI Understands You Better</h2>
+                <p class="text-lg text-text-secondary max-w-3xl mx-auto">
+                    Our AI is specifically trained on Indian cultural contexts, academic systems, and family dynamics to provide truly personalized support.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Cultural Sensitivity -->
+                <div class="card hover:shadow-medium transition-gentle">
+                    <div class="w-12 h-12 bg-accent-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-inter font-semibold text-primary mb-3">Cultural Intelligence</h3>
+                    <p class="text-text-secondary mb-4">Understands joint family dynamics, arranged marriages, career expectations, and festival seasons that affect student mental health.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-accent-100 text-accent-700 px-2 py-1 rounded-full text-xs">Family Pressure</span>
+                        <span class="bg-accent-100 text-accent-700 px-2 py-1 rounded-full text-xs">Career Anxiety</span>
+                        <span class="bg-accent-100 text-accent-700 px-2 py-1 rounded-full text-xs">Social Expectations</span>
+                    </div>
+                </div>
+
+                <!-- Academic Context -->
+                <div class="card hover:shadow-medium transition-gentle">
+                    <div class="w-12 h-12 bg-secondary-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-inter font-semibold text-primary mb-3">Academic Awareness</h3>
+                    <p class="text-text-secondary mb-4">Knows about JEE, NEET, UPSC, semester systems, placement pressures, and competitive exam stress patterns.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-secondary-100 text-secondary-700 px-2 py-1 rounded-full text-xs">JEE/NEET</span>
+                        <span class="bg-secondary-100 text-secondary-700 px-2 py-1 rounded-full text-xs">Placements</span>
+                        <span class="bg-secondary-100 text-secondary-700 px-2 py-1 rounded-full text-xs">Board Exams</span>
+                    </div>
+                </div>
+
+                <!-- Language Support -->
+                <div class="card hover:shadow-medium transition-gentle">
+                    <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M7 2a1 1 0 011 1v1h3a1 1 0 110 2H9.578a18.87 18.87 0 01-1.724 4.78c.29.354.596.696.914 1.026a1 1 0 11-1.44 1.389c-.188-.196-.373-.396-.554-.6a19.098 19.098 0 01-3.107 3.567 1 1 0 01-1.334-1.49 17.087 17.087 0 003.13-3.733 18.992 18.992 0 01-1.487-2.494 1 1 0 111.79-.89c.234.47.489.928.764 1.372.417-.934.752-1.913.997-2.927H3a1 1 0 110-2h3V3a1 1 0 011-1zm6 6a1 1 0 01.894.553l2.991 5.982a.869.869 0 01.02.037l.99 1.98a1 1 0 11-1.79.895L15.383 16h-4.764l-.724 1.447a1 1 0 11-1.788-.894l.99-1.98.019-.038 2.99-5.982A1 1 0 0113 8zm-1.382 6h2.764L13 11.236 11.618 14z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-inter font-semibold text-primary mb-3">Multilingual Support</h3>
+                    <p class="text-text-secondary mb-4">Seamlessly switches between English and regional languages while maintaining cultural context and emotional nuance.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-primary-100 text-primary-700 px-2 py-1 rounded-full text-xs">हिंदी</span>
+                        <span class="bg-primary-100 text-primary-700 px-2 py-1 rounded-full text-xs">தமிழ்</span>
+                        <span class="bg-primary-100 text-primary-700 px-2 py-1 rounded-full text-xs">తెలుగు</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Privacy & Security -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-inter font-bold text-primary mb-4">Your Privacy is Our Priority</h2>
+                <p class="text-lg text-text-secondary">Complete anonymity with enterprise-grade security</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-inter font-semibold text-primary mb-2">End-to-End Encryption</h3>
+                    <p class="text-sm text-text-secondary">All conversations are encrypted and secure</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-secondary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M3.707 2.293a1 1 0 00-1.414 1.414l14 14a1 1 0 001.414-1.414l-1.473-1.473A10.014 10.014 0 0019.542 10C18.268 5.943 14.478 3 10 3a9.958 9.958 0 00-4.512 1.074l-1.78-1.781zm4.261 4.26l1.514 1.515a2.003 2.003 0 012.45 2.45l1.514 1.514a4 4 0 00-5.478-5.478z" clip-rule="evenodd"/>
+                            <path d="M12.454 16.697L9.75 13.992a4 4 0 01-3.742-3.741L2.335 6.578A9.98 9.98 0 00.458 10c1.274 4.057 5.065 7 9.542 7 .847 0 1.669-.105 2.454-.303z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-inter font-semibold text-primary mb-2">Anonymous Usage</h3>
+                    <p class="text-sm text-text-secondary">No personal information required</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-inter font-semibold text-primary mb-2">HIPAA Compliant</h3>
+                    <p class="text-sm text-text-secondary">Healthcare-grade data protection</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M18 8a6 6 0 01-7.743 5.743L10 14l-1 1-1 1H6v2H2v-4l4.257-4.257A6 6 0 1118 8zm-6-4a1 1 0 100 2 2 2 0 012 2 1 1 0 102 0 4 4 0 00-4-4z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-inter font-semibold text-primary mb-2">Data Control</h3>
+                    <p class="text-sm text-text-secondary">Delete conversations anytime</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Brand -->
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <svg class="h-8 w-8 text-white" viewBox="0 0 32 32" fill="currentColor">
+                            <path d="M16 2C8.268 2 2 8.268 2 16s6.268 14 14 14 14-6.268 14-14S23.732 2 16 2zm0 4c5.514 0 10 4.486 10 10s-4.486 10-10 10S6 21.514 6 16 10.486 6 16 6z"/>
+                            <path d="M12 12h8v2h-8zm0 4h8v2h-8zm0 4h6v2h-6z"/>
+                            <circle cx="16" cy="16" r="3" fill="currentColor" opacity="0.3"/>
+                        </svg>
+                        <span class="ml-3 text-xl font-inter font-bold">MindBridge</span>
+                    </div>
+                    <p class="text-primary-200 mb-4 max-w-md">
+                        Bridging the gap between students and mental health support through culturally-sensitive, AI-powered solutions.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="javascript:void(0)" class="text-primary-200 hover:text-white transition-gentle">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M20 10c0-5.523-4.477-10-10-10S0 4.477 0 10c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V10h2.54V7.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V10h2.773l-.443 2.89h-2.33v6.988C16.343 19.128 20 14.991 20 10z" clip-rule="evenodd"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="text-primary-200 hover:text-white transition-gentle">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="text-primary-200 hover:text-white transition-gentle">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-inter font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="ai_assistant_portal.html" class="text-primary-200 hover:text-white transition-gentle">AI Assistant</a></li>
+                        <li><a href="resource_library.html" class="text-primary-200 hover:text-white transition-gentle">Resources</a></li>
+                        <li><a href="professional_network.html" class="text-primary-200 hover:text-white transition-gentle">Find Counselors</a></li>
+                        <li><a href="crisis_support_center.html" class="text-primary-200 hover:text-white transition-gentle">Crisis Support</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div>
+                    <h3 class="text-lg font-inter font-semibold mb-4">Support</h3>
+                    <ul class="space-y-2">
+                        <li><a href="javascript:void(0)" class="text-primary-200 hover:text-white transition-gentle">Help Center</a></li>
+                        <li><a href="javascript:void(0)" class="text-primary-200 hover:text-white transition-gentle">Privacy Policy</a></li>
+                        <li><a href="javascript:void(0)" class="text-primary-200 hover:text-white transition-gentle">Terms of Service</a></li>
+                        <li><a href="javascript:void(0)" class="text-primary-200 hover:text-white transition-gentle">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-primary-700 mt-8 pt-8 text-center">
+                <p class="text-primary-200">© 2025 MindBridge. All Rights Reserved. | Made with ❤️ for Indian Students</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Language selector
+        document.getElementById('language-selector').addEventListener('change', function() {
+            const selectedLang = this.value;
+            // Simulate language change
+            console.log('Language changed to:', selectedLang);
+            
+            // Update welcome message based on language
+            const welcomeMessages = {
+                'en': "Namaste! I'm your MindBridge AI companion. I understand the unique challenges Indian students face - from exam pressure to family expectations. How are you feeling today?",
+                'hi': "नमस्ते! मैं आपका MindBridge AI साथी हूं। मैं भारतीय छात्रों की अनूठी चुनौतियों को समझता हूं - परीक्षा के दबाव से लेकर पारिवारिक अपेक्षाओं तक। आज आप कैसा महसूस कर रहे हैं?",
+                'ta': "வணக்கம்! நான் உங்கள் MindBridge AI துணை. இந்திய மாணவர்கள் எதிர்கொள்ளும் தனித்துவமான சவால்களை நான் புரிந்துகொள்கிறேன் - தேர்வு அழுத்தம் முதல் குடும்ப எதிர்பார்ப்புகள் வரை. இன்று நீங்கள் எப்படி உணர்கிறீர்கள்?",
+                'te': "నమస్కారం! నేను మీ MindBridge AI సహచరుడిని. భారతీయ విద్యార్థులు ఎదుర్కొనే ప్రత్యేక సవాళ్లను నేను అర్థం చేసుకుంటాను - పరీక్షా ఒత్తిడి నుండి కుటుంబ అంచనాల వరకు. ఈరోజు మీరు ఎలా అనిపిస్తున్నారు?",
+                'bn': "নমস্কার! আমি আপনার MindBridge AI সঙ্গী। আমি ভারতীয় ছাত্রদের অনন্য চ্যালেঞ্জগুলি বুঝি - পরীক্ষার চাপ থেকে পারিবারিক প্রত্যাশা পর্যন্ত। আজ আপনি কেমন অনুভব করছেন?"
+            };
+            
+            // This would update the UI in a real implementation
+            if (welcomeMessages[selectedLang]) {
+                // Update the first message in chat
+                console.log('Updated message:', welcomeMessages[selectedLang]);
+            }
+        });
+
+        // Chat functionality
+        const chatInput = document.getElementById('chat-input');
+        const sendButton = document.getElementById('send-button');
+        const chatMessages = document.getElementById('chat-messages');
+        const typingIndicator = document.getElementById('typing-indicator');
+
+        function addMessage(message, isUser = false) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `flex items-start space-x-3 ${isUser ? 'justify-end' : ''}`;
+            
+            const timestamp = new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+            
+            if (isUser) {
+                messageDiv.innerHTML = `
+                    <div class="bg-surface rounded-lg p-4 max-w-md">
+                        <p class="text-text-primary text-sm">${message}</p>
+                        <div class="text-xs text-text-secondary mt-2">${timestamp}</div>
+                    </div>
+                    <div class="w-8 h-8 bg-accent rounded-full flex items-center justify-center flex-shrink-0">
+                        <span class="text-white text-sm font-semibold">You</span>
+                    </div>
+                `;
+            } else {
+                messageDiv.innerHTML = `
+                    <div class="w-8 h-8 bg-secondary rounded-full flex items-center justify-center flex-shrink-0">
+                        <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <div class="bg-secondary-50 rounded-lg p-4 max-w-md">
+                        <p class="text-secondary-800 text-sm">${message}</p>
+                        <div class="text-xs text-secondary-600 mt-2">${timestamp}</div>
+                    </div>
+                `;
+            }
+            
+            // Insert before typing indicator
+            chatMessages.insertBefore(messageDiv, typingIndicator);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        function simulateAIResponse(userMessage) {
+            // Show typing indicator
+            typingIndicator.classList.remove('hidden');
+            
+            setTimeout(() => {
+                typingIndicator.classList.add('hidden');
+                
+                // Simple response logic based on keywords
+                let response = "I understand what you're going through. Let me help you work through this step by step.";
+                
+                if (userMessage.toLowerCase().includes('exam') || userMessage.toLowerCase().includes('test')) {
+                    response = "Exam stress is very common among Indian students. Remember, your worth isn't defined by exam results. Let's focus on healthy study strategies and stress management techniques.";
+                } else if (userMessage.toLowerCase().includes('family') || userMessage.toLowerCase().includes('parents')) {
+                    response = "Family expectations can feel overwhelming. It's important to communicate your feelings while also understanding their perspective. Would you like some tips on having these conversations?";
+                } else if (userMessage.toLowerCase().includes('career') || userMessage.toLowerCase().includes('future')) {
+                    response = "Career uncertainty is natural at your age. Let's explore your interests and strengths together. Remember, there are many paths to success.";
+                }
+                
+                addMessage(response, false);
+            }, 2000);
+        }
+
+        function sendMessage() {
+            const message = chatInput.value.trim();
+            if (message) {
+                addMessage(message, true);
+                chatInput.value = '';
+                simulateAIResponse(message);
+            }
+        }
+
+        sendButton.addEventListener('click', sendMessage);
+        chatInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+
+        // Auto-scroll chat to bottom
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+    </script>
+</body>
+</html>

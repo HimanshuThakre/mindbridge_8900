@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Professional Network - Find Your Mental Health Counselor | MindBridge</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <meta name="description" content="Connect with verified mental health professionals who understand Indian culture. Find counselors by language, specialization, and cultural background." />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fmindbridge7782back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.8"></script>
+</head>
+<body class="bg-background font-source-sans">
+    <!-- Crisis Support Banner -->
+    <div id="crisis-banner" class="bg-error text-white py-2 px-4 text-center text-sm font-medium">
+        <span class="mr-2">🚨 In Crisis?</span>
+        <a href="crisis_support_center.html" class="underline hover:no-underline font-semibold">Get Immediate Help</a>
+        <span class="ml-4 text-xs">24/7 Support Available</span>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="bg-white shadow-soft sticky top-0 z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <svg class="h-8 w-8 text-primary" viewBox="0 0 32 32" fill="currentColor">
+                            <path d="M16 2C8.268 2 2 8.268 2 16s6.268 14 14 14 14-6.268 14-14S23.732 2 16 2zm0 4c5.514 0 10 4.486 10 10s-4.486 10-10 10S6 21.514 6 16 10.486 6 16 6z"/>
+                            <path d="M12 12h8v2h-8zm0 4h8v2h-8zm0 4h6v2h-6z"/>
+                            <circle cx="16" cy="16" r="3" fill="currentColor" opacity="0.3"/>
+                        </svg>
+                    </div>
+                    <div class="ml-3">
+                        <h1 class="text-xl font-inter font-bold text-primary">MindBridge</h1>
+                        <p class="text-xs text-text-secondary">मानसिक स्वास्थ्य सेतु</p>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="homepage.html" class="text-text-secondary hover:text-primary px-3 py-2 rounded-md text-sm transition-gentle">Home</a>
+                        <a href="ai_assistant_portal.html" class="text-text-secondary hover:text-primary px-3 py-2 rounded-md text-sm transition-gentle">AI Assistant</a>
+                        <a href="resource_library.html" class="text-text-secondary hover:text-primary px-3 py-2 rounded-md text-sm transition-gentle">Resources</a>
+                        <a href="professional_network.html" class="text-primary font-semibold px-3 py-2 rounded-md text-sm">Counselors</a>
+                        <a href="student_dashboard.html" class="btn-primary text-sm py-2">Student Portal</a>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-text-secondary hover:text-primary p-2">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation Menu -->
+            <div id="mobile-menu" class="md:hidden hidden">
+                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-surface rounded-lg mt-2">
+                    <a href="homepage.html" class="text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base">Home</a>
+                    <a href="ai_assistant_portal.html" class="text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base">AI Assistant</a>
+                    <a href="resource_library.html" class="text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base">Resources</a>
+                    <a href="professional_network.html" class="text-primary font-semibold block px-3 py-2 rounded-md text-base">Counselors</a>
+                    <a href="student_dashboard.html" class="btn-primary block text-center mt-2">Student Portal</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-br from-primary-50 to-accent-50 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl lg:text-5xl font-inter font-bold text-primary mb-4 leading-tight">
+                    Find Your Perfect Mental Health Match
+                </h1>
+                <p class="text-lg lg:text-xl text-primary-700 mb-2 font-crimson">
+                    सही मानसिक स्वास्थ्य सलाहकार खोजें
+                </p>
+                <p class="text-lg text-text-secondary mb-8 max-w-3xl mx-auto">
+                    Connect with verified mental health professionals who understand your cultural background, speak your language, and specialize in student mental health challenges.
+                </p>
+                
+                <!-- Quick Stats -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-2xl mx-auto">
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-accent">500+</div>
+                        <div class="text-sm text-text-secondary">Verified Counselors</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-secondary">15+</div>
+                        <div class="text-sm text-text-secondary">Languages Supported</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-primary">24/7</div>
+                        <div class="text-sm text-text-secondary">Emergency Support</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search and Filter Section -->
+    <section class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Search Bar -->
+            <div class="card mb-8">
+                <div class="flex flex-col lg:flex-row gap-4">
+                    <div class="flex-1">
+                        <div class="relative">
+                            <input type="text" id="search-counselors" placeholder="Search by name, specialization, or location..." class="input-field pl-10" />
+                            <svg class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <button id="filter-toggle" class="btn-secondary flex items-center justify-center px-6">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.207A1 1 0 013 6.5V4z"/>
+                        </svg>
+                        Filters
+                    </button>
+                </div>
+            </div>
+
+            <!-- Filter Panel -->
+            <div id="filter-panel" class="card mb-8 hidden">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Language Filter -->
+                    <div>
+                        <label class="block text-sm font-semibold text-primary mb-2">Language</label>
+                        <select class="input-field">
+                            <option value>All Languages</option>
+                            <option value="english">English</option>
+                            <option value="hindi">Hindi</option>
+                            <option value="tamil">Tamil</option>
+                            <option value="telugu">Telugu</option>
+                            <option value="bengali">Bengali</option>
+                            <option value="marathi">Marathi</option>
+                        </select>
+                    </div>
+
+                    <!-- Specialization Filter -->
+                    <div>
+                        <label class="block text-sm font-semibold text-primary mb-2">Specialization</label>
+                        <select class="input-field">
+                            <option value>All Specializations</option>
+                            <option value="anxiety">Anxiety & Stress</option>
+                            <option value="depression">Depression</option>
+                            <option value="academic">Academic Pressure</option>
+                            <option value="family">Family Conflicts</option>
+                            <option value="relationships">Relationships</option>
+                            <option value="career">Career Guidance</option>
+                        </select>
+                    </div>
+
+                    <!-- Gender Filter -->
+                    <div>
+                        <label class="block text-sm font-semibold text-primary mb-2">Gender Preference</label>
+                        <select class="input-field">
+                            <option value>No Preference</option>
+                            <option value="female">Female</option>
+                            <option value="male">Male</option>
+                            <option value="non-binary">Non-binary</option>
+                        </select>
+                    </div>
+
+                    <!-- Availability Filter -->
+                    <div>
+                        <label class="block text-sm font-semibold text-primary mb-2">Availability</label>
+                        <select class="input-field">
+                            <option value>Any Time</option>
+                            <option value="immediate">Available Today</option>
+                            <option value="week">This Week</option>
+                            <option value="emergency">Emergency Available</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="flex justify-between items-center mt-6">
+                    <button id="clear-filters" class="text-text-secondary hover:text-primary transition-gentle">
+                        Clear All Filters
+                    </button>
+                    <button class="btn-primary">Apply Filters</button>
+                </div>
+            </div>
+
+            <!-- Results Summary -->
+            <div class="flex justify-between items-center mb-6">
+                <p class="text-text-secondary">Showing <span class="font-semibold text-primary">24</span> counselors</p>
+                <div class="flex items-center space-x-2">
+                    <span class="text-sm text-text-secondary">Sort by:</span>
+                    <select class="input-field py-2 text-sm">
+                        <option value="rating">Highest Rated</option>
+                        <option value="availability">Earliest Available</option>
+                        <option value="experience">Most Experienced</option>
+                        <option value="reviews">Most Reviews</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Counselor Directory -->
+    <section class="pb-16 bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Counselor Card 1 -->
+                <div class="card hover:shadow-medium transition-gentle">
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <div class="flex-shrink-0">
+                            <div class="w-24 h-24 rounded-full overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Dr. Priya Sharma" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.pexels.com/photos/5327585/pexels-photo-5327585.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'; this.onerror=null;" />
+                            </div>
+                        </div>
+                        
+                        <div class="flex-1">
+                            <div class="flex justify-between items-start mb-2">
+                                <div>
+                                    <h3 class="text-xl font-inter font-bold text-primary">Dr. Priya Sharma</h3>
+                                    <p class="text-text-secondary text-sm">Clinical Psychologist, Ph.D.</p>
+                                </div>
+                                <div class="flex items-center">
+                                    <svg class="w-4 h-4 text-warning mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                    </svg>
+                                    <span class="text-sm font-semibold">4.9</span>
+                                    <span class="text-xs text-text-secondary ml-1">(127)</span>
+                                </div>
+                            </div>
+                            
+                            <div class="flex flex-wrap gap-2 mb-3">
+                                <span class="px-2 py-1 bg-accent-100 text-accent-800 text-xs rounded-full">Anxiety & Stress</span>
+                                <span class="px-2 py-1 bg-secondary-100 text-secondary-800 text-xs rounded-full">Academic Pressure</span>
+                                <span class="px-2 py-1 bg-primary-100 text-primary-800 text-xs rounded-full">Family Therapy</span>
+                            </div>
+                            
+                            <div class="flex items-center text-sm text-text-secondary mb-3">
+                                <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M7 2a1 1 0 011 1v1h3a1 1 0 110 2H9.578a18.87 18.87 0 01-1.724 4.78c.29.354.596.696.914 1.026a1 1 0 11-1.44 1.389c-.188-.196-.373-.396-.554-.6a19.098 19.098 0 01-3.107 3.567 1 1 0 01-1.334-1.49 17.087 17.087 0 003.13-3.733 18.992 18.992 0 01-1.487-2.494 1 1 0 111.79-.89c.234.47.489.928.764 1.372.417-.934.752-1.913.997-2.927H3a1 1 0 110-2h3V3a1 1 0 011-1zm6 6a1 1 0 01.894.553l2.991 5.982a.869.869 0 01.02.037l.99 1.98a1 1 0 11-1.79.895L15.383 16h-4.764l-.724 1.447a1 1 0 11-1.788-.894l.99-1.98.019-.038 2.99-5.982A1 1 0 0113 8zm-1.382 6h2.764L13 11.236 11.618 14z" clip-rule="evenodd"/>
+                                </svg>
+                                Hindi, English
+                                <span class="mx-2">•</span>
+                                <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                                </svg>
+                                Delhi, India
+                            </div>
+                            
+                            <p class="text-text-secondary text-sm mb-4">
+                                Specializes in helping students navigate academic stress and family expectations. 8+ years experience with Indian cultural contexts.
+                            </p>
+                            
+                            <div class="flex justify-between items-center">
+                                <div class="flex items-center space-x-4">
+                                    <div class="flex items-center text-sm">
+                                        <div class="w-2 h-2 bg-accent rounded-full mr-2"></div>
+                                        <span class="text-text-secondary">Available Today</span>
+                                    </div>
+                                    <span class="text-sm font-semibold text-primary">₹800/session</span>
+                                </div>
+                                <div class="flex space-x-2">
+                                    <button class="btn-secondary text-sm py-2 px-4">View Profile</button>
+                                    <button class="btn-primary text-sm py-2 px-4">Book Session</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Counselor Card 2 -->
+                <div class="card hover:shadow-medium transition-gentle">
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <div class="flex-shrink-0">
+                            <div class="w-24 h-24 rounded-full overflow-hidden">
+                                <img src="https://images.pexels.com/photos/5327921/pexels-photo-5327921.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Dr. Rajesh Kumar" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                            </div>
+                        </div>
+                        
+                        <div class="flex-1">
+                            <div class="flex justify-between items-start mb-2">
+                                <div>
+                                    <h3 class="text-xl font-inter font-bold text-primary">Dr. Rajesh Kumar</h3>
+                                    <p class="text-text-secondary text-sm">Counseling Psychologist, M.Phil.</p>
+                                </div>
+                                <div class="flex items-center">
+                                    <svg class="w-4 h-4 text-warning mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                    </svg>
+                                    <span class="text-sm font-semibold">4.8</span>
+                                    <span class="text-xs text-text-secondary ml-1">(89)</span>
+                                </div>
+                            </div>
+                            
+                            <div class="flex flex-wrap gap-2 mb-3">
+                                <span class="px-2 py-1 bg-secondary-100 text-secondary-800 text-xs rounded-full">Depression</span>
+                                <span class="px-2 py-1 bg-accent-100 text-accent-800 text-xs rounded-full">Career Guidance</span>
+                                <span class="px-2 py-1 bg-primary-100 text-primary-800 text-xs rounded-full">CBT</span>
+                            </div>
+                            
+                            <div class="flex items-center text-sm text-text-secondary mb-3">
+                                <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M7 2a1 1 0 011 1v1h3a1 1 0 110 2H9.578a18.87 18.87 0 01-1.724 4.78c.29.354.596.696.914 1.026a1 1 0 11-1.44 1.389c-.188-.196-.373-.396-.554-.6a19.098 19.098 0 01-3.107 3.567 1 1 0 01-1.334-1.49 17.087 17.087 0 003.13-3.733 18.992 18.992 0 01-1.487-2.494 1 1 0 111.79-.89c.234.47.489.928.764 1.372.417-.934.752-1.913.997-2.927H3a1 1 0 110-2h3V3a1 1 0 011-1zm6 6a1 1 0 01.894.553l2.991 5.982a.869.869 0 01.02.037l.99 1.98a1 1 0 11-1.79.895L15.383 16h-4.764l-.724 1.447a1 1 0 11-1.788-.894l.99-1.98.019-.038 2.99-5.982A1 1 0 0113 8zm-1.382 6h2.764L13 11.236 11.618 14z" clip-rule="evenodd"/>
+                                </svg>
+                                English, Tamil, Telugu
+                                <span class="mx-2">•</span>
+                                <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                                </svg>
+                                Bangalore, India
+                            </div>
+                            
+                            <p class="text-text-secondary text-sm mb-4">
+                                Expert in cognitive behavioral therapy with focus on career anxiety and academic transitions. Fluent in South Indian languages.
+                            </p>
+                            
+                            <div class="flex justify-between items-center">
+                                <div class="flex items-center space-x-4">
+                                    <div class="flex items-center text-sm">
+                                        <div class="w-2 h-2 bg-warning rounded-full mr-2"></div>
+                                        <span class="text-text-secondary">Next: Tomorrow</span>
+                                    </div>
+                                    <span class="text-sm font-semibold text-primary">₹1200/session</span>
+                                </div>
+                                <div class="flex space-x-2">
+                                    <button class="btn-secondary text-sm py-2 px-4">View Profile</button>
+                                    <button class="btn-primary text-sm py-2 px-4">Book Session</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Counselor Card 3 -->
+                <div class="card hover:shadow-medium transition-gentle">
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <div class="flex-shrink-0">
+                            <div class="w-24 h-24 rounded-full overflow-hidden">
+                                <img src="https://images.pixabay.com/photo/2017/03/01/22/18/avatar-2109804_1280.png" alt="Dr. Meera Patel" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1594824388853-c02b2d2f8c8c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                            </div>
+                        </div>
+                        
+                        <div class="flex-1">
+                            <div class="flex justify-between items-start mb-2">
+                                <div>
+                                    <h3 class="text-xl font-inter font-bold text-primary">Dr. Meera Patel</h3>
+                                    <p class="text-text-secondary text-sm">Family Therapist, Ph.D.</p>
+                                </div>
+                                <div class="flex items-center">
+                                    <svg class="w-4 h-4 text-warning mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                    </svg>
+                                    <span class="text-sm font-semibold">4.9</span>
+                                    <span class="text-xs text-text-secondary ml-1">(156)</span>
+                                </div>
+                            </div>
+                            
+                            <div class="flex flex-wrap gap-2 mb-3">
+                                <span class="px-2 py-1 bg-primary-100 text-primary-800 text-xs rounded-full">Family Conflicts</span>
+                                <span class="px-2 py-1 bg-accent-100 text-accent-800 text-xs rounded-full">Relationship Issues</span>
+                                <span class="px-2 py-1 bg-error/20 text-red-700 text-xs rounded-full">Crisis Support</span>
+                            </div>
+                            
+                            <div class="flex items-center text-sm text-text-secondary mb-3">
+                                <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M7 2a1 1 0 011 1v1h3a1 1 0 110 2H9.578a18.87 18.87 0 01-1.724 4.78c.29.354.596.696.914 1.026a1 1 0 11-1.44 1.389c-.188-.196-.373-.396-.554-.6a19.098 19.098 0 01-3.107 3.567 1 1 0 01-1.334-1.49 17.087 17.087 0 003.13-3.733 18.992 18.992 0 01-1.487-2.494 1 1 0 111.79-.89c.234.47.489.928.764 1.372.417-.934.752-1.913.997-2.927H3a1 1 0 110-2h3V3a1 1 0 011-1zm6 6a1 1 0 01.894.553l2.991 5.982a.869.869 0 01.02.037l.99 1.98a1 1 0 11-1.79.895L15.383 16h-4.764l-.724 1.447a1 1 0 11-1.788-.894l.99-1.98.019-.038 2.99-5.982A1 1 0 0113 8zm-1.382 6h2.764L13 11.236 11.618 14z" clip-rule="evenodd"/>
+                                </svg>
+                                Hindi, Gujarati, English
+                                <span class="mx-2">•</span>
+                                <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                                </svg>
+                                Mumbai, India
+                            </div>
+                            
+                            <p class="text-text-secondary text-sm mb-4">
+                                Specializes in family dynamics and intergenerational conflicts. Available for emergency consultations 24/7.
+                            </p>
+                            
+                            <div class="flex justify-between items-center">
+                                <div class="flex items-center space-x-4">
+                                    <div class="flex items-center text-sm">
+                                        <div class="w-2 h-2 bg-error rounded-full mr-2"></div>
+                                        <span class="text-text-secondary">Emergency Available</span>
+                                    </div>
+                                    <span class="text-sm font-semibold text-primary">₹1000/session</span>
+                                </div>
+                                <div class="flex space-x-2">
+                                    <button class="btn-secondary text-sm py-2 px-4">View Profile</button>
+                                    <button class="btn-primary text-sm py-2 px-4">Book Session</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Counselor Card 4 -->
+                <div class="card hover:shadow-medium transition-gentle">
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <div class="flex-shrink-0">
+                            <div class="w-24 h-24 rounded-full overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Dr. Arjun Singh" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.pexels.com/photos/5327656/pexels-photo-5327656.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'; this.onerror=null;" />
+                            </div>
+                        </div>
+                        
+                        <div class="flex-1">
+                            <div class="flex justify-between items-start mb-2">
+                                <div>
+                                    <h3 class="text-xl font-inter font-bold text-primary">Dr. Arjun Singh</h3>
+                                    <p class="text-text-secondary text-sm">Behavioral Therapist, M.Phil.</p>
+                                </div>
+                                <div class="flex items-center">
+                                    <svg class="w-4 h-4 text-warning mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                    </svg>
+                                    <span class="text-sm font-semibold">4.7</span>
+                                    <span class="text-xs text-text-secondary ml-1">(73)</span>
+                                </div>
+                            </div>
+                            
+                            <div class="flex flex-wrap gap-2 mb-3">
+                                <span class="px-2 py-1 bg-accent-100 text-accent-800 text-xs rounded-full">Study Habits</span>
+                                <span class="px-2 py-1 bg-secondary-100 text-secondary-800 text-xs rounded-full">Time Management</span>
+                                <span class="px-2 py-1 bg-primary-100 text-primary-800 text-xs rounded-full">ADHD Support</span>
+                            </div>
+                            
+                            <div class="flex items-center text-sm text-text-secondary mb-3">
+                                <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M7 2a1 1 0 011 1v1h3a1 1 0 110 2H9.578a18.87 18.87 0 01-1.724 4.78c.29.354.596.696.914 1.026a1 1 0 11-1.44 1.389c-.188-.196-.373-.396-.554-.6a19.098 19.098 0 01-3.107 3.567 1 1 0 01-1.334-1.49 17.087 17.087 0 003.13-3.733 18.992 18.992 0 01-1.487-2.494 1 1 0 111.79-.89c.234.47.489.928.764 1.372.417-.934.752-1.913.997-2.927H3a1 1 0 110-2h3V3a1 1 0 011-1zm6 6a1 1 0 01.894.553l2.991 5.982a.869.869 0 01.02.037l.99 1.98a1 1 0 11-1.79.895L15.383 16h-4.764l-.724 1.447a1 1 0 11-1.788-.894l.99-1.98.019-.038 2.99-5.982A1 1 0 0113 8zm-1.382 6h2.764L13 11.236 11.618 14z" clip-rule="evenodd"/>
+                                </svg>
+                                English, Punjabi, Hindi
+                                <span class="mx-2">•</span>
+                                <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                                </svg>
+                                Chandigarh, India
+                            </div>
+                            
+                            <p class="text-text-secondary text-sm mb-4">
+                                Focuses on academic performance enhancement and behavioral modifications. Specializes in ADHD and learning difficulties.
+                            </p>
+                            
+                            <div class="flex justify-between items-center">
+                                <div class="flex items-center space-x-4">
+                                    <div class="flex items-center text-sm">
+                                        <div class="w-2 h-2 bg-accent rounded-full mr-2"></div>
+                                        <span class="text-text-secondary">Available Today</span>
+                                    </div>
+                                    <span class="text-sm font-semibold text-primary">₹900/session</span>
+                                </div>
+                                <div class="flex space-x-2">
+                                    <button class="btn-secondary text-sm py-2 px-4">View Profile</button>
+                                    <button class="btn-primary text-sm py-2 px-4">Book Session</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="text-center mt-12">
+                <button class="btn-secondary px-8 py-3">
+                    Load More Counselors
+                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-inter font-bold text-primary mb-4">How to Get Started</h2>
+                <p class="text-lg text-text-secondary max-w-3xl mx-auto">
+                    Your journey to better mental health is just a few clicks away. Here's how our platform works.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Step 1 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-primary">1</span>
+                    </div>
+                    <h3 class="text-xl font-inter font-semibold text-primary mb-3">Browse & Filter</h3>
+                    <p class="text-text-secondary">
+                        Use our advanced filters to find counselors who match your language, cultural background, and specific needs.
+                    </p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-accent">2</span>
+                    </div>
+                    <h3 class="text-xl font-inter font-semibold text-primary mb-3">Book Session</h3>
+                    <p class="text-text-secondary">
+                        Schedule your appointment at a convenient time. Choose between video calls, phone calls, or in-person meetings.
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-secondary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-secondary">3</span>
+                    </div>
+                    <h3 class="text-xl font-inter font-semibold text-primary mb-3">Start Healing</h3>
+                    <p class="text-text-secondary">
+                        Begin your therapeutic journey with professional support tailored to your cultural context and personal needs.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust & Safety Section -->
+    <section class="py-16 bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-inter font-bold text-primary mb-4">Your Safety & Privacy Matter</h2>
+                <p class="text-lg text-text-secondary max-w-3xl mx-auto">
+                    All our counselors are verified professionals with proper credentials and cultural competency training.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Verification -->
+                <div class="text-center">
+                    <div class="w-12 h-12 bg-accent-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-inter font-semibold text-primary mb-2">Verified Professionals</h3>
+                    <p class="text-sm text-text-secondary">All credentials checked and verified</p>
+                </div>
+
+                <!-- Privacy -->
+                <div class="text-center">
+                    <div class="w-12 h-12 bg-secondary-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-inter font-semibold text-primary mb-2">Complete Privacy</h3>
+                    <p class="text-sm text-text-secondary">End-to-end encrypted communications</p>
+                </div>
+
+                <!-- Cultural Training -->
+                <div class="text-center">
+                    <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+                            <path d="M6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-inter font-semibold text-primary mb-2">Cultural Competency</h3>
+                    <p class="text-sm text-text-secondary">Trained in Indian cultural contexts</p>
+                </div>
+
+                <!-- 24/7 Support -->
+                <div class="text-center">
+                    <div class="w-12 h-12 bg-error/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-error" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-inter font-semibold text-primary mb-2">Crisis Support</h3>
+                    <p class="text-sm text-text-secondary">Emergency help available 24/7</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Brand -->
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <svg class="h-8 w-8 text-white" viewBox="0 0 32 32" fill="currentColor">
+                            <path d="M16 2C8.268 2 2 8.268 2 16s6.268 14 14 14 14-6.268 14-14S23.732 2 16 2zm0 4c5.514 0 10 4.486 10 10s-4.486 10-10 10S6 21.514 6 16 10.486 6 16 6z"/>
+                            <path d="M12 12h8v2h-8zm0 4h8v2h-8zm0 4h6v2h-6z"/>
+                            <circle cx="16" cy="16" r="3" fill="currentColor" opacity="0.3"/>
+                        </svg>
+                        <span class="ml-3 text-xl font-inter font-bold">MindBridge</span>
+                    </div>
+                    <p class="text-primary-200 mb-4 max-w-md">
+                        Bridging the gap between students and mental health support through culturally-sensitive, AI-powered solutions.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="javascript:void(0)" class="text-primary-200 hover:text-white transition-gentle">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M20 10c0-5.523-4.477-10-10-10S0 4.477 0 10c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V10h2.54V7.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V10h2.773l-.443 2.89h-2.33v6.988C16.343 19.128 20 14.991 20 10z" clip-rule="evenodd"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="text-primary-200 hover:text-white transition-gentle">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="text-primary-200 hover:text-white transition-gentle">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-inter font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="ai_assistant_portal.html" class="text-primary-200 hover:text-white transition-gentle">AI Assistant</a></li>
+                        <li><a href="resource_library.html" class="text-primary-200 hover:text-white transition-gentle">Resources</a></li>
+                        <li><a href="professional_network.html" class="text-primary-200 hover:text-white transition-gentle">Find Counselors</a></li>
+                        <li><a href="crisis_support_center.html" class="text-primary-200 hover:text-white transition-gentle">Crisis Support</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div>
+                    <h3 class="text-lg font-inter font-semibold mb-4">Support</h3>
+                    <ul class="space-y-2">
+                        <li><a href="javascript:void(0)" class="text-primary-200 hover:text-white transition-gentle">Help Center</a></li>
+                        <li><a href="javascript:void(0)" class="text-primary-200 hover:text-white transition-gentle">Privacy Policy</a></li>
+                        <li><a href="javascript:void(0)" class="text-primary-200 hover:text-white transition-gentle">Terms of Service</a></li>
+                        <li><a href="javascript:void(0)" class="text-primary-200 hover:text-white transition-gentle">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-primary-700 mt-8 pt-8 text-center">
+                <p class="text-primary-200">© 2025 MindBridge. All Rights Reserved. | Made with ❤️ for Indian Students</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Filter panel toggle
+        document.getElementById('filter-toggle').addEventListener('click', function() {
+            const filterPanel = document.getElementById('filter-panel');
+            filterPanel.classList.toggle('hidden');
+        });
+
+        // Clear filters functionality
+        document.getElementById('clear-filters').addEventListener('click', function() {
+            const selects = document.querySelectorAll('#filter-panel select');
+            selects.forEach(select => {
+                select.selectedIndex = 0;
+            });
+            document.getElementById('search-counselors').value = '';
+        });
+
+        // Search functionality
+        document.getElementById('search-counselors').addEventListener('input', function() {
+            // In a real application, this would filter the counselor cards
+            console.log('Searching for:', this.value);
+        });
+    </script>
+</body>
+</html>
